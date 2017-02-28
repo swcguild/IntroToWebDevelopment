@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debugging Exercises</title>
+  <style>
+  div {
+	display: block;
+  }
+  
+  .foodIpsum {
+	border: 1px dashed red;
+	margin: 5px;
+  }
+  
+  #whedonIpsum {
+	margin: 5px;
+	border: 1px solid green;
+  }
+  
+  </style>
+  <script type="text/javascript">
+	
+	function doLoadStuff(){		
+		hideAllDivs();
+	}
+	
+	function hideAllDivs(){
+		var allDivs = document.getElementsByTagName("div");
+		for (var i = 0; i < allDivs.length; i++){
+			allDivs[i].style.display = "none";
+		}
+	}
+	
+	function showElement(elements,shouldBeShown){				
+		for (element in elements) {
+			elements[element].style.display = (shouldBeShown ? "block" : "none");
+		}
+	}
+	
+	function openDiv(ipsumSelection){		
+		hideAllDivs();
+		switch(ipsumSelection){
+			case "All":				
+				showElement(document.getElementsByTagName("div"),true);
+				break;
+			case "Food":
+				showElement(document.getElementsByClassName("foodIpsum"),true);
+				break;
+			case "Whedon":
+				document.getElementById("whedonIpsum").style.display = "block";
+				break;
+			default:
+				break;
+		}
+	}
+	
+	function doDynamicThings(){
+		document.getElementById("span1").innerHTML = "Changed <b>innerHTML</b> with HTML-formatted text<hr />";
+		document.getElementById("span2").innerHTML = "Changed innerHTML with non-HTML-formatted text";
+		document.getElementById("span3").textContent = "Changed textContent with <b>HTML-formatted</b> text<hr />";
+		document.getElementById("span4").textContent = "Changed textContent with non-HTML-formatted text";
+	}
+  </script>
+</head>
+<body onload="doLoadStuff();">
+<!-- This is an HTML comment -->
+<div id="whedonIpsum">
+Everyone's a hero in their own way, in their own not that heroic way. And what's with all the carrots? Seems odd you'd name your ship after a battle you were on the wrong side of. 
+</div>
+<div id="cheeseIpsum" class="foodIpsum">
+Feta camembert de normandie camembert de normandie. Cottage cheese gouda mascarpone st. agur blue cheese edam rubber cheese cheese on toast pepper jack. Cheese triangles pepper jack squirty cheese danish fontina hard cheese cheddar cauliflower cheese who moved my cheese. Mozzarella manchego.
+</div>
+<div id="baconIpsum" class="foodIpsum">
+Bacon ipsum dolor amet jerky pork chop shank pig brisket boudin shoulder spare ribs doner alcatra fatback bacon pancetta. Venison short loin short ribs tail bacon. Pastrami pork belly andouille, tenderloin short loin spare ribs rump. Tri-tip kielbasa shankle, corned beef tongue alcatra ground round. Drumstick short ribs ground round, venison corned beef strip steak chicken prosciutto biltong shank pastrami alcatra tri-tip.
+</div>
+<button onclick="openDiv('All');">Open All Divs</button><button onclick="openDiv('Food');">Open Only Food Divs</button><button onclick="openDiv('Whedon');">Open the Whedon Ipsum</button>
+<hr />
+<section style="margin:100px;">
+<span id="span1">Span1</span><span id="span2">Span2</span><span id="span3">Span3</span><span id="span4">Span4</span>
+<br />
+<button onclick="doDynamicThings();">Do Dynamic Things</button>
+</section>
+</body>
+</html>

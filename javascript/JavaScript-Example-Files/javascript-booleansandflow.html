@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booleans and Flow</title>
+  <style>
+	table, th, td {
+		border: 1px solid #000; border-collapse: collapse;
+		padding: 5px;
+	}
+	
+	table, fieldset { 
+		margin: 10px;
+	}	
+  </style>
+  <script type="text/javascript">
+	var isTrue = true;
+	var isFalse = false;
+	var isTired = isTrue;
+  
+	function printBoolLogic(){
+		console.info("isTrue: " + isTrue);
+		console.info("isFalse: " + isFalse);
+		console.log("isTrue && isFalse: " + (isTrue && isFalse));
+		console.log("isTrue || isFalse: " + (isTrue || isFalse));
+		console.log("!isFalse: " + !isFalse + "\n!isTrue: " + !isTrue);
+		printTruthTable();
+	}
+	
+	function printTruthTable(){		
+		var condition1 = [false, false, true, true];
+		var condition2 = [false,true,false,true];
+		var outHTML = "";
+		outHTML = "<tr><th>X</th><th>Y</th><th>!X</th><th>X && Y</th><th>X || Y</th></tr>";
+		for (var conditionCounter = 0;conditionCounter < condition1.length; conditionCounter++){
+			outHTML += "<tr><td>" + condition1[conditionCounter] + "</td><td>" + condition2[conditionCounter] + "</td><td>" + (!condition1[conditionCounter]) + "</td><td>" + (condition1[conditionCounter] && condition2[conditionCounter]) + "</td><td>" + (condition1[conditionCounter] || condition2[conditionCounter]) + "</td></tr>";
+		}		
+		document.getElementById("truthTable").innerHTML = outHTML;
+	}
+	
+	function alertStopAndGo(id){
+		if (id == "Stop1") {
+			console.log("STOP!");
+			alert("STOP!");
+		}
+		else {
+			console.log("GO");
+			alert("GO");
+		}
+	}
+	
+	function sayHello(personName) {
+		return "Hello, " + personName + "!";
+	}
+	
+	function greetEveryone(){
+		alert("Hello!");
+	}
+	
+	function alertTrafficLight(id){
+		if (id == "Stop") {
+			console.error("STOP");
+			alert("STOP");
+		} else {
+			if (id == "Slow") {
+				console.warn("SLOW DOWN!");
+				alert("SLOW DOWN!");
+			} else {
+				console.info("GO!!!");
+				alert("GO!!!");
+
+			}
+		}
+		
+		if (id == "Stop") {
+			console.error("STOP");
+			alert("STOP");
+		} else if (id == "Slow") {
+			console.warn("SLOW DOWN!");
+			alert("SLOW DOWN!");
+		} else {
+			console.info("GO!!!");
+			alert("GO!!!");		
+		}
+	
+	
+		switch(id){
+			case "Stop":
+				console.error("STOP");
+				alert("STOP");
+				break;
+			case "Slow":
+				console.warn("SLOW DOWN!");
+				alert("SLOW DOWN!");
+				break;
+			default:
+				console.info("GO!!!");
+				alert("GO!!!");
+		}
+	}
+	
+	function funWithArrays(){
+		var fruits = ['kiwi','rambutan','mango','tomato'];
+		
+		fruits.pop();
+		fruits.push('gooseberry');
+		
+		fruits.shift();
+		fruits.unshift("banana");
+		
+		fruits.splice(0,2);
+		
+		fruits[fruits.length] = "blueberry";
+		
+		fruits[2] = "pineapple";
+		
+		fruits[8] = "dragonfruit";
+		
+		for (var fruit in fruits) {
+			console.info(fruits[fruit]);
+		}
+		
+		for (var i = 0; i < fruits.length; i++){
+			console.info(fruits[i]);
+		}
+	}
+	
+	function funWithArraysNumbers(){
+		var evens = new Array();
+		var odds = new Array();
+		for (var loopCounter = 0; loopCounter <= 10; loopCounter++){
+			if (loopCounter % 2 == 0) {
+				evens[evens.length] = loopCounter;
+			} else {
+				odds[odds.length] = loopCounter;
+			}
+		}
+		console.log(evens);
+		console.log(odds);
+		
+		for (var num in evens){
+			if (evens[num] == 0 || evens[num] == 10) {
+				alert("Skipping " + evens[num]);
+				continue;
+			}
+			console.log(evens[num]);
+		}
+		
+	}
+	
+	function doWhileLoops(){
+		var userInput;
+		do {
+			userInput = prompt("Give me a number between 1 and 10.");
+			if (userInput <= 0 || userInput > 10) {
+				alert("The number must be between 1 and 10!");
+			}
+		} while (userInput > 10 || userInput <= 0);
+		
+		while (userInput % 2 == 0){
+			alert("This is an even number!")
+			userInput = prompt("Give me an odd number.");
+		}
+	}
+  </script>
+</head>
+<body>
+<button onclick="printBoolLogic();">Do Boolean Logic</button>
+<button onclick="funWithArraysNumbers();">Do Number Array Fun</button>
+<button onclick="funWithArrays();">Do Fruit Array Fun</button>
+<button onclick="doWhileLoops();">Loops Fun</button>
+<br />
+<br />
+<fieldset>
+<button onclick="alertStopAndGo(this.id);" id="Stop1" style="background-color:red;">Stop</button>
+<button onclick="alertStopAndGo(this.id);" id="Go1" style="background-color:green;">Go</button>
+</fieldset>
+<fieldset>
+<button onclick="alertSelectedButton(this.id);" id="Stop" style="background-color:red;">Stop</button>
+<button onclick="alertSelectedButton(this.id);" id="Slow" style="background-color:yellow;">Slow</button>
+<button onclick="alertSelectedButton(this.id);" id="Go" style="background-color:green;">Go</button>
+</fieldset>
+<table id="truthTable">
+</table>
+</body>
+</html>

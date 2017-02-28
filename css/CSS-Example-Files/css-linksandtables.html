@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<title>Styling Links and Tables</title>
+<link href="styles/external.css" type="text/css" rel="stylesheet" />
+<style>
+	table, th, td {
+		border: 1px solid black;		
+		border-collapse: collapse;		
+		padding: 5px 0px 5px 10px;		
+	}
+	
+	table { 
+		width: 100%;
+	}
+	th {
+		height: 25px;
+	}
+	tfoot td {
+		text-align: center;
+	}
+	
+	
+
+	tbody td {
+		vertical-align: top;
+	}
+	
+	th {
+		text-align: left;
+	}
+		
+	
+	tbody tr:nth-child(even){
+		background-color: LemonChiffon;
+	}
+	
+	tbody tr:nth-child(odd){
+		background-color: LawnGreen;
+	}
+	
+	
+	#books th, #books td { padding: 5px;}
+	
+</style>
+</head>
+<body>
+<ul>
+<li><a href="http://thesoftwareguild.com">The Software Guild</a></li>
+<li><a href="http://caniuse.com">Can I Use...<br />(HTML5/CSS3/JS Compatibility)</a></li>
+<li><a href="http://localhost">Home Page</a></li>
+<li><a href="http://xkcd.com">XKCD.com</a>
+</ul>
+<a name="thispage"></a>
+
+<!-- Skeleton -->
+<!-- <table>
+   <caption>Table Caption</caption>
+   <thead>
+<tr><th>Heading1</th><th>Heading 2</th></tr>
+   </thead>
+   <tbody>
+<tr><td>1</td><td>Lorem<br />ipsum<br />d</td></tr>
+<tr><td>2</td><td>ipsum</td></tr>
+<tr><td>3</td><td>dolor</td></tr>
+<tr><td>4</td><td>Lorem</td></tr>
+   </tbody>
+   <tfoot>
+<tr><td colspan="2">Table Footer Text</td></tr>
+   </tfoot>
+</table>
+-->
+
+<table id="books">
+   <caption>Books to Read</caption>
+   <thead>
+<tr><th>Position</th><th>Title</th></tr>
+   </thead>
+   <tbody>
+<tr><td>1</td><td>Hello, World</td></tr>
+<tr><td>2</td><td>Digital Fortress</td></tr>
+<tr><td>3</td><td>Automating Microsoft Windows Server 2008 R2 with Windows PowerShell 2.0</td></tr>
+<tr><td>4</td><td>Apocalypse Pi</td></tr>
+   </tbody>
+</table>
+
+</body>
+</html>

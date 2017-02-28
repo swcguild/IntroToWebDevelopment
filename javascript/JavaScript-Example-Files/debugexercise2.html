@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debugging Exercises</title>
+  <script type="text/javascript">
+	function funWithArrays(){
+		var fruits = ['kiwi','rambutan','mango','tomato'];
+		
+		fruits.pop();
+		fruits.push('gooseberry');
+		
+		fruits.shift();
+		fruits.unshift("banana");
+		
+		fruits.splice(0,2);
+		
+		fruits[fruits.length] = "blueberry";
+		
+		fruits[2] = "pineapple";
+		
+		fruits[8] = "dragonfruit";
+		
+		for (var fruit in fruits) {
+			console.info(fruits[fruit]);
+		}
+		
+		for (var i = 0; i < fruits.length; i++){
+			console.info(fruits[i]);
+		}
+	}
+  </script>
+</head>
+<body>
+<div id="EvenNumbers"></div>
+  <button onclick="funWithArrays();">Fun With Fruits</button>
+</body>
+</html>
