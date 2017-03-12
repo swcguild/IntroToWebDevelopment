@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Language Basics</title>
+  <script type="text/javascript">
+	// A variable stored with the document keyword
+	var documentObject = document;
+	// A variable stored with the window keyword
+	var windowObject = window;
+	// A variable stored to an expression with fixed values
+	var mathResults = 1 + 1;
+	// A variable set to a string
+	var dayName = "Saturday";
+	// A variable  not initialized - to be used as undefined
+	var undefValue;
+	// A variable set explicitly to null
+	var nullValue = null;	
+	// A variable set to a boolean value
+	var boolValue = true;
+	// A variable set to a NaN expression
+	var notANumberValue = 5 - dayName;
+	
+	// Variables set with fixed values
+	var firstScore = 25;
+	var secondScore = 30;
+	// Variables set to the results of expressions
+	var totalScore = firstScore + secondScore;
+	var avgScore = (firstScore + secondScore) / 2;
+	
+	/* The code below doesn't get executed
+	because it is commented. */
+	// mathFacts = 1 + 3;
+	
+	function getVariableTypes(){
+		console.log("documentObject is :" + typeof(documentObject));
+		console.log("mathResults is :" + typeof(mathResults));
+		console.log("dayName is :" + typeof(dayName));
+		console.log("nullValue is :" + typeof(nullValue));
+		console.log("boolValue is :" + typeof(boolValue));
+		console.log("notANumberValue is :" + typeof(notANumberValue));
+		console.log("undefValue is :" + typeof(undefValue));
+	}
+	
+	function doMath(){
+		console.log("5+4=" + (5+4));
+		console.log("5-4=" + (5-4));
+		console.log("5/4=" + (5/4));
+		console.log("5*4=" + (5*4));	
+	}
+	
+  </script>
+</head>
+<body>
+<button onclick="getVariableTypes();">Get Variable Types</button>
+<button onclick="doMath();">Do Math</button>
+</body>
+</html>
