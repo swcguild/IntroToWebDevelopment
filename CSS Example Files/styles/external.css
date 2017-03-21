@@ -1,0 +1,83 @@
+
+	/* This is used 
+	for validation */
+	.warning {
+		font-weight: bold;
+		color: red;
+	} 
+	
+	.redback {
+		background-color: rgb(255,0,0);
+	}
+	
+	.rgbared {
+		background-color: rgba(255,0,0,0.5);
+	}
+
+	.hexared {
+		background-color: #ff0000;
+		background-color: #f00;
+	}
+	
+	.redback2 {
+		background-color: red;
+	}
+	
+	.lemonback {
+		background-color: LemonChiffon;
+	}
+	
+	.dodgerback {
+		background-color: DodgerBlue;
+	}
+	
+	.tile1 {
+		background-image: url("../images/confetti.gif");		
+		background-repeat: repeat;
+		height: 200px;
+	}
+	
+	.tile2 {
+		background: url("../images/confetti.gif") repeat;
+		height: 200px;
+	}
+	
+	.blog-indent {
+		text-indent: 25%;
+	}
+	
+	
+	@font-face {
+		font-family: "Foundry Name Class Styles";
+		font-style: normal;
+		font-weight: 400;
+		src: url("http://path.to/myfont.woff2");
+	}
+	
+	
+	a {
+		font-family: monospace;
+		text-decoration: underline;
+		font-weight: none;
+	}
+
+	a:link {
+	  color: Green;
+	}
+
+	a:visited {
+		color: Red;
+	}
+
+	a:hover {
+	 text-decoration: none;
+	 color: #00c; 
+	 font-family: cursive;
+	}
+
+	a:active {
+		font-weight:bold;
+	}
+	
+	
+	
