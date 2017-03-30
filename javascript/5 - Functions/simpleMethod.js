@@ -30,12 +30,6 @@ sayHiTo(3.1415);
 // What about a boolean?
 sayHiTo(true);
 
-// What about an expression?
-sayHiTo("Sarah" + "Dave" );
-
-// Can we pass multiple parameters?
-sayHiTo("Sarah","Dave");
-
 // What about null?
 sayHiTo(null);
 
