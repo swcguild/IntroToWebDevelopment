@@ -1,0 +1,3 @@
+Control Flow
+
+So far, our building blocks include values, operators, variables, expressions, and statements.  Most problems cannot be solved with expressions or statements alone.  Many solutions to problems involve creating values and changing them based on a condition or possibly repeating something over and over.  In this lesson, "Control Flow," we will learn more about decisions and repetition through if...else statements, switch statements, and a few types of loops.  By the end of this lesson, you should be able to use all of the building blocks learned so far to create code that can figure out whether a number is evenly divisible by another number and then perform an action based on that result.

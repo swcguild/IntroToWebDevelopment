@@ -1,0 +1,7 @@
+Collections
+
+In the past few lessons, we have been working with single values.  But what if we had a group of values to work on?  For example, maybe we have a group of quiz scores for a student, a group of people on an adventure, or perhaps some fruit that are stocked in a produce section.  In this lesson, we will learn how to work with groups of data called collections.  By the end of this lesson, you should be able to:
+
+* Add things to a collection
+* Remove things from a collection
+* Work within a collection
