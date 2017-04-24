@@ -1,0 +1,9 @@
+Lesson 1
+
+In this lesson, "Introduction to JavaScript", we discuss the history and evolution of the programming language created to make websites interactive, JavaScript.  What started in the browser has grown to many platforms.  By the end of this lesson, you should be familiar with:
+
+* What a programming language is
+* What JavaScript is
+* The history of JavaScript
+* The evolution of JavaScript
+* Where you can write JavaScript
