@@ -1,3 +1,5 @@
 Course Summary
 
+
+
 In this course, we learned how to add functionality to our web pages with JavaScript. From the history and evolution of the language to learning about the building blocks of the language to building a JavaScript application, you should now feel comfortable using JavaScript to add functionality to your own web pages.

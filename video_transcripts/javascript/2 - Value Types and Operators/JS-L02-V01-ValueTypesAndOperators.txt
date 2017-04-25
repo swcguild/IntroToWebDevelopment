@@ -1,0 +1,11 @@
+Value Types and Operators
+
+As we mentioned in the introduction, we are going to take a building blocks approach to JavaScript.  Much like you need to know about various building blocks before building a wall, we need to understand the building blocks in JavaScript before we can build an application.  In this lesson, "Value Types and Operators," we look at the tiniest of building blocks, values and operators.  JavaScript supports various types of values including:
+
+* numbers
+* Booleans
+* strings
+* null
+* undefined  
+
+From math to logic to comparison, JavaScript also provides operators to combine, compare, contrast, and otherwise manipulate these values.  You will also be introduced to the Google Chrome Developer Tools so that you can test the blocks of code in the JavaScript Console.   By the end of this lesson, you should be familiar with the types of values and some of the operators in JavaScript.

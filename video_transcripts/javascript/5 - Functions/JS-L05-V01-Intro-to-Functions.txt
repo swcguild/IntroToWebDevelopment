@@ -1,3 +1,5 @@
 Functions
 
+
+
 In the previous lesson, "Control Flow," we saw how a switch statement could be used to make multiple related if...else statements more readable.  In this lesson, we will learn how we can separate our code into reusable code blocks called functions.  You have already used a function in previous lessons.  console.log() is a function that allows us to log values to our JavaScript console.  We will look at some of the other functions JavaScript has built-in.  Finally, we will build our own functions.  By the end of this lesson, you should feel more comfortable using functions and start building your own functions.

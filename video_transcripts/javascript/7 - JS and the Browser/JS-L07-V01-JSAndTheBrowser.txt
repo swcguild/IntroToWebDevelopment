@@ -1,0 +1,3 @@
+JavaScript and the Browser
+
+At this point, you have been exposed to many of the building blocks in JavaScript: including variables, collections, statements, decision blocks, loops, and functions.  In this lesson, "JavaScript and the Browser," we will learn about the building blocks JavaScript has for working with web pages.  We will be using all of the building blocks we have learned throughout this course.  By the end of this lesson, you should be able to add a carousel of rotating images to your restaurant home page and add validation to your contact page.

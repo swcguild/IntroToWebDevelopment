@@ -1,3 +1,5 @@
 Expressions, Statements, and Variables
 
+
+
 In the previous lesson, "Value Types and Operators," we looked at the tiniest building blocks of JavaScript.  Suppose we want to store these values to use later.  In this lesson, "Expressions, Statements, and Variables," we will look at storing our values into something called a variable.  Once we have variables, we will see how we can combine our variables and operators to build expressions.  Finally, we can see how to build a bigger building block called a statement.  By the end of this lesson, you should be familiar with how to build statements through the use of values, operators, variables, and expressions.
